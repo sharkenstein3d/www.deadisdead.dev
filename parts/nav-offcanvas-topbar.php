@@ -2,13 +2,11 @@
 	 and a topbar for medium-up -->
 
 <div class="top-bar" id="top-bar-menu">
-	<div class="top-bar-left float-left">
-		<ul class="menu">
-			<li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
-		</ul>
+	<div class="top-bar-left float-left hide-for-small-only">
+		<?php wp_nav_menu( array( 'jointswp' => 'social-links' ) ); ?>
 	</div>
 	<div class="top-bar-right show-for-medium">
-		<?php joints_top_nav(); ?>	
+		<?php joints_top_nav(); ?>
 	</div>
 	<div class="top-bar-right float-right show-for-small-only">
 		<ul class="menu">
