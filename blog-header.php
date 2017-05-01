@@ -43,9 +43,9 @@
 			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
 
 			<div class="off-canvas-content" data-off-canvas-content>
-        <header id="header" class="hero" style="background-image: url('<?php header_image(); ?>">
-          <h1 class="logo"><?php bloginfo('name'); ?></h1>
-        </header>
+        <div class="blog-header-container" style="background-image: url('<?php header_image(); ?>">
+          <h1 class="logo-blog"><?php bloginfo('name'); ?> : Updates</h1>
+        </div>
 
 				<nav class="top-bar" role="navigation">
 

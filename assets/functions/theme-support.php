@@ -50,9 +50,35 @@ add_theme_support( 'custom-header', $args );
 		)
 	);
 
+// Register Custom Post Types
+add_action('init', 'register_custom_posts_init');
+
+function register_custom_posts_init() {
+    // Register Records
+    $records_labels = array(
+        'name'               => 'Records',
+        'singular_name'      => 'Record',
+        'menu_name'          => 'Records'
+    );
+    $records_args = array(
+        'labels'             => $records_labels,
+        'public'             => true,
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' )
+    );
+    register_post_type('records', $records_args);
+
+}
+
 	// Set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.
 	$GLOBALS['content_width'] = apply_filters( 'joints_theme_support', 1200 );
 
 } /* end theme support */
 
 add_action( 'after_setup_theme', 'joints_theme_support' );
+
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

@@ -1,0 +1,234 @@
+
+
+/*********************
+HEADER STYLES
+*********************/
+.header {
+	ul.off-canvas-list li {
+		list-style: none;
+		text-transform: uppercase;
+	}
+}
+
+.hero {
+	height: 87vh;
+	color: white;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+		@include breakpoint(large) {
+			height: 90vh;
+		}
+}
+
+.top-bar {
+	background-color: $medium-gray;
+
+	a {
+		background-color: $medium-gray;
+	}
+}
+
+.buy-album-button {
+	margin-top: 2rem;
+	margin-left: 10%;
+}
+
+
+.album-cover-container-home {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+
+	@include breakpoint(medium) {
+		padding: 0;
+		margin: 0;
+	}
+
+}
+
+.album-cover-home {
+	height: 300px;
+	width: 300px;
+
+	@include breakpoint(medium) {
+		margin-top: 3rem;
+		height: 42vh;
+		width: auto;
+	}
+
+	@include breakpoint(large) {
+		height: auto;
+		width: auto;
+	}
+}
+
+.album-section {
+	padding: $global-padding;
+
+	@include breakpoint(large) {
+	padding: 4rem;
+	}
+
+}
+.album-description-home {
+	padding: $global-padding;
+
+	@include breakpoint(medium) {
+		padding: $global-padding-double;
+	}
+}
+
+.album-description-home h3 {
+	color: $light-gray;
+}
+// SHOWS
+
+.shows-header {
+	padding: 3rem;
+	color: $light-gray;
+}
+
+#shows {
+	background-color: $medium-gray;
+	padding: $global-padding;
+}
+
+.shows-section {
+}
+
+table.gigpress-table-upcoming {
+	background-color: red;
+}
+tr.gigpress-header {
+	background-color: scale-color($dark-gray, $lightness: -34%);
+	border-bottom: 5px dashed red;
+}
+
+td.gigpress-date, td.gigpress-city, td.gigpress-venue, td.gigpress-country {
+	color: $light-gray;
+}
+
+/* This is for the tour name header cells */
+th.gigpress-heading {
+	background-color: red;
+	border-bottom: 1px solid #CCC;
+}
+// MEMBERS SECTION
+
+$members-three-up-width: 900px;
+
+.members-three-up {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: $dark-gray-blue;
+
+  .row {
+    max-width: $members-three-up-width;
+  }
+
+  .columns {
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 40em) {
+      margin-bottom: 0;
+    }
+  }
+
+  .fa {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: $primary-color;
+  }
+}
+
+.members-three-up-headline {
+  margin-bottom: 2rem;
+  font-size: 24px;
+}
+
+.member-photo {
+	width: 50%;
+
+	@include breakpoint(medium){
+		width: auto;
+	}
+}
+
+// SHOWS
+
+.gigpress-header {
+	background-color: $black;
+}
+
+.gigpress-row.active {
+	background-color: $dark-gray;
+}
+
+.gigpress-row.active.gigpress-alt {
+	background-color: $dark-gray-blue;
+}
+// FOOTER
+
+.copyright {
+  color: $medium-gray;
+}
+
+// BLOG
+
+.logo-blog {
+	font-family: $font__logo;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 25px #162025;
+	color: rgba(244,244,244,.18);
+	font-size: 2.2em;
+	padding: 1.7rem;
+	margin-bottom: 0;
+
+		@media screen and (min-width: 64em) {
+			font-size: 4em;
+		}
+
+}
+
+.blog-header-container {
+	margin: 0;
+	padding: 0;
+
+}
+
+.blog-header-single {
+	padding: 2rem;
+}
+.blog-entry{
+	margin-top: 1.5rem;
+}
+
+.blog-entry:first-of-type {
+	margin-top: 2rem;
+}
+
+.blog-entry-container {
+	border: 10px solid $medium-gray;
+}
+.article-header {
+	background-color: $dark-gray-blue;
+	border-bottom: 5px dashed $medium-gray;
+
+	a {
+		color: $light-gray;
+	}
+}
+
+.entry-content {
+	background-color: $dark-gray-blue;
+
+	p {
+		color: $white;
+	}
+}

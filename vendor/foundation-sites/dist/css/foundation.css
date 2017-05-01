@@ -2377,9 +2377,6 @@ select {
     margin: auto; }
   .menu.nested {
     margin-left: 1rem; }
-  .menu .active > a {
-    background: #1779ba;
-    color: #fefefe; }
   .menu.menu-bordered li {
     border: 1px solid #e6e6e6; }
     .menu.menu-bordered li:not(:first-child) {
